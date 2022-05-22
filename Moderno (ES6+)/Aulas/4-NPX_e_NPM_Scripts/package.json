@@ -1,0 +1,17 @@
+{
+  "name": "4-npx_e_npm_scripts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx babel index.js -o transpiled.js"
+  },
+  "keywords": [],
+  "author": "Marcus Martins",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.0"
+  }
+}
