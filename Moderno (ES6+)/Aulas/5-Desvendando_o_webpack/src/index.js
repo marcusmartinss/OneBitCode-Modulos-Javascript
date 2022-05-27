@@ -1,3 +1,7 @@
-import moment from "moment/src/moment"
+function formatDate() { 
+    const date = new Date(); 
+    const formatDate = date.toLocaleString(); 
+    return formatDate; 
+}  
 
-alert(moment().format("HH:mm:ss"))
+alert(formatDate())

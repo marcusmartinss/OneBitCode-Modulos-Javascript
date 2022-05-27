@@ -15,7 +15,7 @@
   \***********************/
 /***/ (() => {
 
-eval("alert(\"Bem vindo à Via Láctea\")\n\n//# sourceURL=webpack://5-Desvendando_o_webpack/./src/galaxy.js?");
+eval("alert(\"Bem vindo à Via Láctea\");\n\n//# sourceURL=webpack://5-Desvendando_o_webpack/./src/galaxy.js?");
 
 /***/ })
 
