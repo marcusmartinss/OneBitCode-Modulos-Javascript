@@ -1,5 +1,5 @@
 {
-  "name": "6-intro_aos_modulos",
+  "name": "7-Exportando_um_modulo",
   "version": "1.0.0",
   "main": "babel.config.js",
   "scripts": {
