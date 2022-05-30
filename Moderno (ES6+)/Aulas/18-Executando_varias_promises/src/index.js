@@ -19,9 +19,13 @@ const newBatteryComsumption = function(currentVelocity, velocityToIncrease) {
     })
 }
 
-let velocity = 70
+let velocity =  70
 
 let velocityIncreased = increaseVelocity(velocity)
 let batteryComsumption = newBatteryComsumption(80, velocity)
 
-Promise.all([velocityIncreased, batteryComsumption])
+Promise.all([velocityIncreased, batteryComsumption]).then(results => {
+    console.log(results)
+}).catch(errors => {
+    console.log(errors)
+})
