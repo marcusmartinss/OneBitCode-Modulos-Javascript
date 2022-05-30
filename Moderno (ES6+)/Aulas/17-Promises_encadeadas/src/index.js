@@ -27,11 +27,13 @@ const calculateBatteryConsumption = function(velocity, seconds) {
 }
 
 calculateBatteryConsumption(90,300).then(chargeConsumed => {
-    updateBatteryCharge(chargeConsumed).then(newCharge => {
-        console.log(`Carga atual: ${newCharge}`)
-    }).catch(error => {
-        console.log(error)
-    })
+    return updateBatteryCharge(chargeConsumed)
+}).then( newCharge => {
+    console.log(`Carga atual: ${newCharge}`)
 }).catch(error => {
     console.log(error)
 })
+// Para evitar um código sujo e complicado, um único catch pode
+// ser utilizado para qualquer reject das promises, sendo o 
+// segundo then utilizado apenas quando o primeiro for
+// suprido com resolve
