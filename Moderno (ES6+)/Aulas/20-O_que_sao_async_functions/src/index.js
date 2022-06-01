@@ -8,6 +8,9 @@ let laserGun = {
 }
 
 async function adjustPosition(x, y, z) {
+    if (z > 90) {
+        return Promise.reject("Angulo Z inválido para arma")
+    }
     laserGun.currentPosition = [x, y, z]
     return([x, y, z])
 }
@@ -23,7 +26,9 @@ function moveAndFire(x, y, z) {
         return fire(...coord)
     }).then(coord => {
         console.log(`Começando a atirar nas coordenadas (${coord[0]}), (${coord[1]}), (${coord[2]})`)
+    }).catch(error => {
+        console.log(error)
     })
 }
 
-moveAndFire(20, 40, 10)
+moveAndFire(20, 40, 95)
