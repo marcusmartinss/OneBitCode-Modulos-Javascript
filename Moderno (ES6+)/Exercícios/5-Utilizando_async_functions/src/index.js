@@ -1,3 +1,6 @@
+import "core-js"
+import "regenerator-runtime"
+
 import Spaceship from './Spaceship'
 import SpaceshipEngine from './SpaceshipEngine'
 
