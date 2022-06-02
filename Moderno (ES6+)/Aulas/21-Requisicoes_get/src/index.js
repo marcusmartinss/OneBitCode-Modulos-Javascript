@@ -17,7 +17,19 @@ async function loadNeos() {
 
         neos.push(newNeo)
     })
-    console.log(neos)
+    renderNEO(neos)
+}
+
+function renderNEO(neos) {
+    const ulElement = document.getElementById("neo-list")
+    neos.forEach(neo => {
+        const liElement = document.createElement("li")
+        const isSentry = neo.isSentry ? "Perigo de colisão" : "Sem perigo de colisão"
+        const text = `${neo.id} | ${neo.name} | ${neo.averageEstimatedDiameter} | ${isSentry}`
+        
+        liElement.innerText = text
+        ulElement.appendChild(liElement)
+    })
 }
 
 loadNeos()
